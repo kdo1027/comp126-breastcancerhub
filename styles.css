@@ -78,24 +78,24 @@ nav a:hover {
     color: #EC4899;
 }
 
-.hero-row {
+.body-row {
   padding: 1.75rem 1.25rem;
 }
 
-.hero-image img {
+.body-image img {
   width: 100%;
   height: auto;
   border-radius: 12px;
 }
 
-.hero-text {
+.body-text {
   text-align: center;
   margin-top: 1.5rem;
 }
 
-.hero-text h2,
-.hero-text h3,
-.hero-text p {
+.body-text h2,
+.body-text h3,
+.body-text p {
   margin-bottom: 1rem;
 }
 
@@ -111,9 +111,9 @@ h1, h2, h3, h4 {
 }
 
 h1 { font-size: 34px; }
-h2 { font-size: 28px; }
-h3 { font-size: 22px; }
-h4 { font-size: 18px; }
+h2 { font-size: 16px; }
+h3 { font-size: 16px; }
+h4 { font-size: 16px; }
 
 .section p {
     color: #2D2D2D;
@@ -221,17 +221,17 @@ footer a {
 footer a:hover {
     opacity: 0.8;
 }
-.hero-row {
+.body-row {
   padding: 1.75rem 1.25rem;
 }
 
-.hero-image img {
+.body-image img {
   width: 100%;
   height: auto;
   border-radius: 12px;
 }
 
-.hero-text {
+.body-text {
   text-align: center;
   margin-top: 1.5rem;
 }
@@ -263,15 +263,15 @@ footer a:hover {
     }
 
     h1 { font-size: 44px; }
-    h2 { font-size: 34px; }
-    h3 { font-size: 26px; }
-    h4 { font-size: 20px; }
+    h2 { font-size: 16px; }
+    h3 { font-size: 16px; }
+    h4 { font-size: 16px; }
 
     .stay-connected {
         max-width: 650px;
         margin: 2.5rem auto;
     }
-    .hero-row {
+    .body-row {
       max-width: 1200px;
       margin: 2rem auto;
       display: flex;
@@ -281,19 +281,19 @@ footer a:hover {
       padding: 2rem;
   }
 
-  .hero-image,
-  .hero-text {
+  .body-image,
+  .body-text {
       flex: 1;
   }
 
-  .hero-text {
+  .body-text {
       text-align: left;
       margin-top: 0;
   }
 
-  .hero-text h2,
-  .hero-text h3,
-  .hero-text p {
+  .body-text h2,
+  .body-text h3,
+  .body-text p {
       text-align: left;
   }
 }
