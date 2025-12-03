@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/donate.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/BCH-Logo-Stacked-CMYK.png" alt="BCH Logo" class="logo-img" />
+            </a>
+        </div>
+
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <nav id="menu">
+            <a href="index.html">Home</a>
+            <a href="#about">About</a>
+            <a href="programs.html">Programs</a>
+            <a href="donate.html" class="donate-header">Donate</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="donation-intro">
+            <h1>Your Giving Makes A Difference</h1>
+            <p>100% of our services are FREE & 100% of Donations are driven toward the Donor's bucket of choice. 
+                Your generosity helps us sustain our mission #TogetherWeSaveLives</p>
+            <p>Support from "kindhearted" donors from our community members. Every Penny Counts. 
+                Operating expenses are limited to logistics solely needed to execute BCH Goals and Projects.</p>
+        </section>
+        <section class="donation-form-confirmation">
+            <h2>Thank You for Your Donation!</h2>
+            <h4>We will get in touch with you soon!</h4>
+            <p>Together we save lives. Your contribution makes a real difference in someone's journey.</p>
+        </section>
+        <section class="donation-outtro">
+            <p>100% of your donation goes directly to the program you choose. 
+                We are a 501(c)(3) nonprofit organization, and your donation is tax-deductible.</p>
+        </section>
+    </main>
+
+    <footer>
+        © 2025 Breast Cancer Hub. All Rights Reserved.
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const menu = document.getElementById('menu');
+
+        hamburger.addEventListener('click', () => {
+            menu.classList.toggle('show');
+            hamburger.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  color: #1A1A1A;
+  background-color: #FFFFFF;
+  line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 2rem;
+    align-items: center;
+    background: linear-gradient(to right, #FCE7F3, #FDF2F8);
+}
+
+.logo-img {
+    height: 60px;
+    width: auto;
+}
+
+.hamburger {
+    width: 40px;
+    height: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.hamburger div {
+    height: 5px;
+    background: #1A1A1A;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.hamburger.open div:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+.hamburger.open div:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.open div:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+
+nav {
+    display: none;
+    flex-direction: column;
+    background: #FCE7F3;
+    padding: 1rem;
+}
+
+nav.show {
+    display: flex;
+}
+
+nav a {
+    color: #1A1A1A;
+    font-family: 'Nunito', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #EC4899;
+}
+
+.programs-dscrp {
+  padding: 4rem 1.5rem;
+  text-align: center;
+  background: linear-gradient(180deg, #FFF5F7 0%, #FFFFFF 100%);
+}
+
+.programs-dscrp h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.programs-dscrp p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #2D2D2D;
+}
+
+.programs-section {
+  padding: 4rem 1.5rem;
+  background: #FAFBFC;
+}
+
+.programs-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+}
+
+.program-card {
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #F3F4F6;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.program-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(236, 72, 153, 0.15);
+  border-color: #FCE7F3;
+}
+
+.program-card-image {
+  height: 180px;
+  position: relative;
+  overflow: hidden;
+}
+
+.program-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.program-card-body {
+  padding: 1.75rem;
+}
+
+.program-card h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+  color: #1A1A1A;
+}
+
+.program-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  color: #2D2D2D;
+}
+
+.primary-btn {
+  display: inline-block;
+  background-color: #F6339A;
+  color: #FFFFFF;
+  padding: 0.75rem 2.5rem;
+  border-radius: 999px;
+  font-size: 17px;
+  font-weight: 700;
+  font-family: 'Nunito', sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.primary-btn:hover {
+  background-color: #EC4899;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(246, 51, 154, 0.3);
+}
+
+.cta-wrapper {
+  padding: 4rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(180deg, #FAFBFC 0%, #FFF5F7 100%);
+}
+
+.cta-card {
+  background: linear-gradient(135deg, #FCE7F3 0%, #FDF2F8 100%);
+  max-width: 900px;
+  width: 100%;
+  border-radius: 20px;
+  text-align: center;
+  padding: 3rem 2rem;
+  box-shadow: 0 4px 16px rgba(236, 72, 153, 0.12);
+  border: 1px solid rgba(252, 231, 243, 0.8);
+}
+
+.cta-card h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+  color: #1A1A1A;
+}
+
+.cta-card p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  color: #2D2D2D;
+}
+
+footer {
+    background: #101828;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    background: none;
+  }
+
+  nav a {
+    margin: 0;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .programs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

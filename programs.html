@@ -4,29 +4,31 @@
   <meta charset="UTF-8" />
   <title>Programs | Breast Cancer Hub</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/programs.css" />
+  <link rel="stylesheet" href="styles/programs.css" />
 </head>
 <body>
+  <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/BCH-Logo-Stacked-CMYK.png" alt="BCH Logo" class="logo-img" />
+            </a>
+        </div>
 
-  <!-- ================= HEADER ================= -->
-  <header class="site-header">
-    <div class="nav-container">
-      <div> 
-        <img src="img/bch-logo.png" alt="BCH Logo" class="logo">
-      </div>
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
 
-      <nav class="main-nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="programs.html">Programs</a>
-        <a href="donate.html" class="nav-btn">Donate</a>
-      </nav>
-    </div>
-  </header>
+        <nav id="menu">
+            <a href="index.html">Home</a>
+            <a href="#about">About</a>
+            <a href="programs.html">Programs</a>
+            <a href="donate.html" class="donate-header">Donate</a>
+        </nav>
+    </header>
 
-  <!-- ================= HERO ================= -->
   <section class="programs-dscrp">
     <div>
       <h1>Our Programs</h1>
@@ -37,7 +39,6 @@
     </div>
   </section>
 
-  <!-- ================= PROGRAM CARDS ================= -->
   <main class="programs-section">
     <div class="programs-grid">
 
@@ -48,7 +49,6 @@
         <div class="program-card-body">
           <h3>Breast Self-Examination (BSE)</h3>
           <p>Learn how to perform early detection checks with guided educational resources.</p>
-          <a href="#" class="secondary-btn">Learn More</a>
         </div>
       </article>
 
@@ -59,7 +59,6 @@
         <div class="program-card-body">
           <h3>Relief & Support Services</h3>
           <p>Financial and emotional assistance for individuals undergoing treatment.</p>
-          <a href="#" class="secondary-btn">View Resources</a>
         </div>
       </article>
 
@@ -70,7 +69,6 @@
         <div class="program-card-body">
           <h3>BCH Research Program</h3>
           <p>Participate in IRB-approved breast cancer research initiatives.</p>
-          <a href="#" class="secondary-btn">Explore Research</a>
         </div>
       </article>
 
@@ -81,14 +79,12 @@
         <div class="program-card-body">
           <h3>BCH Leaders Program</h3>
           <p>Leadership training and research development for pre-med students.</p>
-          <a href="#" class="secondary-btn">Get Involved</a>
         </div>
       </article>
 
     </div>
   </main>
 
-  <!-- ================= CALL TO ACTION CARD ================= -->
   <section class="cta-wrapper">
     <div class="cta-card">
       <h3>Get Involved</h3>
@@ -97,10 +93,19 @@
     </div>
   </section>
 
-  <!-- ================= FOOTER ================= -->
-  <footer class="site-footer">
-    <p>© 2025 Breast Cancer Hub. All rights reserved.</p>
-  </footer>
+  <footer>
+        © 2025 Breast Cancer Hub. All Rights Reserved.
+    </footer>
+
+  <script>
+      const hamburger = document.getElementById('hamburger');
+      const menu = document.getElementById('menu');
+
+      hamburger.addEventListener('click', () => {
+          menu.classList.toggle('show');
+          hamburger.classList.toggle('open');
+      });
+  </script>
 
 </body>
 </html>
