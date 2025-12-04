@@ -275,17 +275,6 @@ nav a:hover {
 
 
 
-footer {
-  background: #101828;
-  color: white;
-  text-align: center;
-  padding: 1.5rem;
-  font-size: 14px;
-  line-height: 1.5;
-
-}
-
-
 @media (min-width: 768px) {
   nav {
     position: static;
