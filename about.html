@@ -4,16 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About | Breast Cancer Hub</title>
-
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="styles/about.css" />
 </head>
 
 <body>
-<div class="page">
-
-    
+<div>
     <header>
         <div class="logo">
             <a href="index.html">
@@ -31,7 +27,7 @@
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="programs.html">Programs</a>
-            <a href="donate.html" >Donate</a>
+            <a href="donate.html">Donate</a>
         </nav>
     </header>
 
@@ -164,15 +160,6 @@
                 <p>Saving lives through awareness, early detection, and community support.</p>
             </div>
 
-            <div class="footer-links">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="programs.html">Programs</a></li>
-                    <li><a href="donate.html">Donate</a></li>
-                </ul>
-            </div>
-
             <div class="footer-contact">
                 <h4>Contact</h4>
                 <p>Email: info@breastcancerhub.org</p>
@@ -187,5 +174,15 @@
     </footer>
 
 </div>
+
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.getElementById('menu');
+
+    hamburger.addEventListener('click', () => {
+        menu.classList.toggle('show');
+        hamburger.classList.toggle('open');
+    });
+</script>
 </body>
 </html>
