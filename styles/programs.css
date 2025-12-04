@@ -154,7 +154,7 @@ nav a:hover {
 .program-card p {
   font-size: 16px;
   line-height: 1.6;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0;
   color: #2D2D2D;
 }
 
@@ -179,7 +179,10 @@ nav a:hover {
 }
 
 .cta-wrapper {
-  padding: 4rem 1.5rem;
+  padding-top: 0rem;
+  padding-bottom: 4rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   display: flex;
   justify-content: center;
   background: linear-gradient(180deg, #FAFBFC 0%, #FFF5F7 100%);
