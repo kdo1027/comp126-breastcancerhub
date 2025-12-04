@@ -1,6 +1,3 @@
-/* ================================
-   Tokens & Global
-   ================================ */
 
 :root {
     --color-primary: #FF3FA5;
@@ -11,6 +8,7 @@
     --color-text: #111111;
     --color-muted: #6b6f82;
     --color-navy: #151A3A;
+
 
     --radius-lg: 16px;
     --radius-md: 12px;
@@ -25,11 +23,9 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    
 }
 
-html {
-    scroll-behavior: smooth;
-}
 
 body {
     font-family: "Nunito", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -47,18 +43,15 @@ body {
 ul { list-style: none; }
 a { color: inherit; text-decoration: none; }
 
-/* Shared shell width */
+
 .header-inner,
 .about-page,
 .footer-inner {
-    max-width: 1400px;        /* WIDER on desktop */
+    max-width: 1400px;       
     margin: 0 auto;
-    padding-inline: 2rem;     /* a bit more padding on sides */
+    padding-inline: 2rem;    
 }
 
-/* ================================
-   Header & Nav
-   ================================ */
 
 .site-header {
     background: linear-gradient(90deg, #F6D4FF 0%, #FDD7E8 50%, #FFE7F5 100%);
@@ -79,13 +72,11 @@ a { color: inherit; text-decoration: none; }
     gap: 0.6rem;
 }
 
-/* rectangle logo */
 .header-logo {
     width: 120px;
     height: 40px;
     border-radius: 10px;
     background: #ffffff;
-    object-fit: contain;
 }
 
 .header-title {
@@ -100,35 +91,36 @@ a { color: inherit; text-decoration: none; }
     gap: 0.6rem;
 }
 
+
 .nav-item {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.55rem 1.3rem;
-    border-radius: var(--radius-pill);
-    background: linear-gradient(90deg, #F6D4FF 0%, #FDD7E8 60%, #FFE7F5 100%);
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     font-weight: 600;
     color: var(--color-navy);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
-    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, color 0.15s ease;
+    padding: 0.2rem 0;
+    background: none;
+
+    border-radius: 0;
+    transition: color 0.15s ease;
+    text-decoration: none;
 }
+
 
 .nav-item:hover,
 .nav-item:focus-visible {
-    background: linear-gradient(90deg, #FEF2FF 0%, #FFE3F5 60%, #FFEEFE 100%);
-    transform: translateY(-1px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    color: var(--color-primary);
 }
+
 
 .nav-item.active {
-    background: linear-gradient(90deg, var(--color-primary) 0%, #FF5FB6 50%, #FF7FD0 100%);
-    color: #fff;
+    background: linear-gradient(90deg, #FFA6D9 0%, #FF7AC3 50%, #FF5FBA 100%);
+    color: var(--color-navy);
+    padding: 0.45rem 1.2rem;
+    border-radius: 999px;
+
 }
 
-/* ================================
-   Buttons
-   ================================ */
+
+
 
 .btn {
     display: inline-flex;
@@ -169,9 +161,6 @@ a { color: inherit; text-decoration: none; }
     transform: translateY(-1px);
 }
 
-/* ================================
-   About Layout
-   ================================ */
 
 .about-page {
     padding-block: 2rem 3.25rem;
@@ -184,11 +173,11 @@ a { color: inherit; text-decoration: none; }
     box-shadow: var(--shadow-soft);
 }
 
-/* Whole section stacked; main then side cards beneath */
+
 .about-grid {
     margin-top: 1.75rem;
     display: grid;
-    grid-template-columns: 1fr;   /* full width */
+    grid-template-columns: 1fr;  
     gap: 1.75rem;
 }
 
@@ -201,7 +190,7 @@ a { color: inherit; text-decoration: none; }
     gap: 1.5rem;
 }
 
-/* info boxes span full width */
+
 .info-section {
     display: grid;
     grid-template-columns: 1fr;
@@ -213,16 +202,17 @@ a { color: inherit; text-decoration: none; }
 
 .info-media {
     width: 100%;
-    border-radius: var(--radius-md);
-    overflow: hidden;
+    display: flex;
+    justify-content: center;   
 }
 
 .info-media img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    display: block;
+    width: 85%;               
+    height: auto;
+    object-fit: contain;
+    border-radius: var(--radius-md);
 }
+
 
 .info-text h2 {
     font-family: "Montserrat", system-ui, sans-serif;
@@ -243,15 +233,12 @@ a { color: inherit; text-decoration: none; }
 
 .info-text li { margin-bottom: 0.25rem; }
 
-/* our programs / global impact section – moved to bottom by HTML order */
+
 .about-side {
     display: grid;
     gap: 1rem;
 }
 
-/* ================================
-   Cards
-   ================================ */
 
 .card {
     border-radius: var(--radius-md);
@@ -299,9 +286,7 @@ a { color: inherit; text-decoration: none; }
     padding: 1.25rem 1.4rem;
 }
 
-/* ================================
-   CTA
-   ================================ */
+
 
 .about-cta.cta-card {
     margin-top: 2.25rem;
@@ -325,9 +310,6 @@ a { color: inherit; text-decoration: none; }
     color: var(--color-muted);
 }
 
-/* ================================
-   Forms (for other pages)
-   ================================ */
 
 .form-control {
     width: 100%;
@@ -354,18 +336,14 @@ textarea.form-control {
     box-shadow: 0 0 0 3px rgba(255, 63, 165, 0.18);
 }
 
-/* ================================
-   Footer (bigger)
-   ================================ */
 
 .site-footer {
     background: var(--color-navy);
     color: #fff;
-    padding-top: 2.5rem;        /* bigger footer */
-}
+    padding-top: 2.5rem;       
 
 .footer-inner {
-    padding-bottom: 2.25rem;    /* more vertical space */
+    padding-bottom: 2.25rem;  
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.75rem;
@@ -395,15 +373,13 @@ textarea.form-control {
 .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.15);
     margin-top: 0.5rem;
-    padding: 1.1rem 2rem 1.3rem;  /* bigger bottom bar */
+    padding: 1.1rem 2rem 1.3rem;  
     text-align: center;
     font-size: 0.85rem;
     color: #c3c6de;
 }
 
-/* ================================
-   Responsive
-   ================================ */
+
 
 @media (max-width: 640px) {
     .header-inner {
@@ -414,7 +390,6 @@ textarea.form-control {
 }
 
 @media (min-width: 768px) {
-    /* image left, text right inside each full-width box */
     .info-section {
         grid-template-columns: 1.1fr 2fr;
         align-items: center;
@@ -423,8 +398,6 @@ textarea.form-control {
     .info-media img {
         height: 220px;
     }
-
-    /* our programs + global impact side by side at bottom */
     .about-side {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -438,4 +411,7 @@ textarea.form-control {
     .footer-inner {
         grid-template-columns: 1.6fr 1fr 1fr;
     }
+}
+
+
 }
